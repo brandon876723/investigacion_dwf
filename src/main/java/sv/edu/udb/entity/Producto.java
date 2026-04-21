@@ -1,4 +1,4 @@
-package sv.edu.udb.entitty;
+package sv.edu.udb.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

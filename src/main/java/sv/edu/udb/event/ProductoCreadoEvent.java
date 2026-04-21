@@ -1,7 +1,7 @@
 package sv.edu.udb.event;
 
 import org.springframework.context.ApplicationEvent;
-import sv.edu.udb.entitty.Producto;
+import sv.edu.udb.entity.Producto;
 
 public class ProductoCreadoEvent extends ApplicationEvent {
     private Producto producto;

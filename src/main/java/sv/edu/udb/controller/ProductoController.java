@@ -3,8 +3,9 @@ package sv.edu.udb.controller;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import sv.edu.udb.entitty.Producto;
+import sv.edu.udb.entity.Producto;
 import sv.edu.udb.service.ProductoService;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/productos")
@@ -19,6 +20,11 @@ public class ProductoController {
     @PostMapping
     public ResponseEntity<Producto> crear(@RequestBody Producto p) {
         return ResponseEntity.status(HttpStatus.CREATED).body(service.crear(p));
+    }
+
+    @GetMapping
+    public ResponseEntity<List<Producto>> obtenerTodos() {
+        return ResponseEntity.ok(service.obtenerTodos());
     }
 
     @GetMapping("/{id}")
